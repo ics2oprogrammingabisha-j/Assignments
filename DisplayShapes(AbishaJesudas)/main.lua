@@ -54,11 +54,11 @@ local myParallelogram
 local heightOfParallelogram = 200
 local baseOfPrallelogram = 350
 local areaOfParallelogram
-local verticesaParallelogram = -25,-25, -25,35, -15,25	
+local verticesaParallelogram = { -25,-25, -25,35, -15,25 }
 
 
 -- draw the parallelogram that is the width and the height
-myParallelogram = display.newPolygon(300, 500, widthOfParallelogram, heightOfParallelogram)
+myParallelogram = display.newPolygon(300, 500, verticesaParallelogram)
 
 -- anchor the parallelogram in the middle left corner of the screen and set its (x,y) position
 myParallelogram.anchorX = 0 
@@ -75,11 +75,8 @@ myParallelogram:setFillColor(128/255, 255/255, 0/255)
 -- set the color of the border 
 myParallelogram:setStrokeColor(255/255, 255/255, 255/255)
 
--- calculate the area of the parallelogram
-areaOfParallelogram = baseOfPrallelogram * heightOfParallelogram
-
 -- write the name name of the shape on the screen .
-areaText =  display.new("Parallelogram", 0, 0, Arial, textSize)
+areaText =  display.newText("Parallelogram", 0, 0, Arial, textSize)
 
 -- set the color of the newText
 areaText:setTextColor(128/255 ,255/255 ,0/255) 
@@ -98,11 +95,10 @@ local myHexagon
 local heightOfHexagon = 200
 local baseOfHexagon = 350
 local areaOfHexagon
-local verticesHexagon = -25,-25, -25,35, -15,25	
+local verticesHexagon = { -25,-25, -25,35, -15,25 }
 
 -- draw the Hexagon that is the width and the height
-myHexagon = display.newPolygon(200, 400, widthOfParallelogram, heightOfParallelogram)
-
+myHexagon = display.newPolygon(200, 400, verticesHexagon)
 -- anchor the parallelogram in the middle left corner of the screen
 -- and set its (x,y) position
 myParallelogram.anchorX = 0 
@@ -123,10 +119,10 @@ myHexagon:setStrokeColor(0/255, 0/255, 0/255)
 areaOfHexagon = baseOfHexagon * heightOfHexagon
 
 -- write the name name of the shape on the screen .
-areaText =  display.new("Hexagon", 0, 0, Arial, textSize)
+areaText = display.newText("Hexagon", 0, 0, Arial, textSize)
 
 -- set the color of the newText
-areaText:setTextColor(0/255 ,0/255 ,0/255) 
+areaText:setTextColor(1/255 ,0/255 ,0/255) 
 
 -- anchor the text and set its(x,y) position
 areaText.anchorX = 0
