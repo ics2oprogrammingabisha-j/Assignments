@@ -1,16 +1,17 @@
- -- Title: AreaOfRectangleAndCircle
+-- Title: Displaying shapes
 -- Name: Abisha Jesudas
 -- Course: ICS2O/3C
--- This program i show you how to make adisplay shapes on an ipad 
+-- This program I show you how to make adisplay shapes on an ipad 
 
 -------------------------------------------------------------------------------------------
 local myTriangle
-local baseOfTriangle
-local heigthOfTriangle
-local areaText
+local triX = display.contentWidth * 1/4
+local triY = display.contentHeight * 1/2
 local textSize = 50
-local verticesTriangle = { 0,-50, 50,50, -50,50 }
+local verticesTriangle = { 0,-70, 70,70, -70,70 }
 
+-- hide the status bar
+display.setStatusBar(display.HiddenStatusBar)
 
 -- set the background colour of my screen.
 display.setDefault("background", 0/255, 0/255, 0/255)
@@ -19,58 +20,86 @@ display.setDefault("background", 0/255, 0/255, 0/255)
 myTriangle = display.newPolygon(500, 500, verticesTriangle)
 
 -- anchor the rectangle in the top left corner of the screen and it sets its(x,y) position
-myTriangle.anchorX = 0
-myTriangle.anchorY = 0
-myTriangle.x = 440
-myTriangle.y = 320
+myTriangle.x = 512
+myTriangle.y = 250
 
 -- set the width of the border
-myTriangle. strokeWidth = 10
+myTriangle.strokeWidth = 5
 
 -- set the color of the triangle
 myTriangle:setFillColor(255/255, 0/255, 255/255)
 
 -- set the color of the border
-myTriangle:setStrokeColor(0/255, 0/255, 0/255)
+myTriangle:setStrokeColor(255/255, 255/255, 255/255)
 
 -- write the name of the shape on the screen .
 areaText = display.newText("triangle", 0,0, Arial, textSize)
 
 -- anchor the text and set its (x,y) position
-areaText.anchorX = 350
-areaText.anchorY = 400
-areaText.x = 20
-areaText.y =display.contentHeight/2
-
-
+areaText.x = 512
+areaText.y = 480
 
 -- set the colur of the newText
-areaText:setTextColor(0, 0, 0)
+areaText:setTextColor(255/255, 0/255, 255/255)
+
+
+-----------------------------------------------------------------------------------------------
+
+-- create my local varibles
+local myHexagon
+local hexX = display.contentWidth * 1/4
+local hexY = display.contentHeight * 1/2
+local hexVertices = { -50,50, 50,50, 100,-100, 50,-50, -50,-50, -100,-100, }
+
+-- draw the Hexagon that is the width and the height
+myHexagon = display.newPolygon( hexX, hexY, hexVertices )
+
+-- anchor the Hexagon in the middle left corner of the screen and set its (x,y) position
+myHexagon.x = 256
+myHexagon.y = 250
+
+-- set the width of the border 
+myHexagon.strokeWidth = 5
+
+-- set the color of the Hexagon
+myHexagon:setFillColor(128/255, 255/255, 0/255)
+
+-- set the color of the border 
+myHexagon:setStrokeColor(255/255, 255/255, 255/255)
+
+-- write the name name of the shape on the screen .
+areaText = display.newText("Hexagon", 0, 0, Arial, textSize)
+
+-- set the color of the newText
+areaText:setTextColor(128/255, 255/255, 0/255) 
+
+-- anchor the text and set its(x,y) position
+areaText.x = 215
+areaText.y = 450
+areaText = display.contentHeight/2
 
 ----------------------------------------------------------------------------------------
 
+--[
 -- create my local varibles
 local myParallelogram
-local heightOfParallelogram = 200
-local baseOfPrallelogram = 350
-local areaOfParallelogram
-local verticesaParallelogram = { -25,-25, -25,35, -15,25 }
+local paraX = display.contentWidth * 3/4
+local paraY = display.contentHeight * 1/2
+local verticesaParallelogram = { -50,-50, -25,50, 50,50, 25,-50 }
 
 
 -- draw the parallelogram that is the width and the height
 myParallelogram = display.newPolygon(300, 500, verticesaParallelogram)
 
 -- anchor the parallelogram in the middle left corner of the screen and set its (x,y) position
-myParallelogram.anchorX = 0 
-myParallelogram.anchorY = 0
-myParallelogram.x = 20 
-myParallelogram.y = 20
+myParallelogram.x = 750
+myParallelogram.y = 250
 
 -- set the width of the border 
-myParallelogram.strokeWidth = 20
+myParallelogram.strokeWidth = 5
 
 -- set the color of the Parallelogram
-myParallelogram:setFillColor(128/255, 255/255, 0/255)
+myParallelogram:setFillColor(0/255, 255/255, 255/255)
 
 -- set the color of the border 
 myParallelogram:setStrokeColor(255/255, 255/255, 255/255)
@@ -79,54 +108,45 @@ myParallelogram:setStrokeColor(255/255, 255/255, 255/255)
 areaText =  display.newText("Parallelogram", 0, 0, Arial, textSize)
 
 -- set the color of the newText
-areaText:setTextColor(128/255 ,255/255 ,0/255) 
+areaText:setTextColor(0/255 ,255/255 ,255/255) 
 
 -- anchor the text and set its(x,y) position
-areaText.anchorX = 0
-areaText.anchorY = 0
-areaText.x = 80
-areaText.y = 200
+areaText.x = 780
+areaText.y = 500
 areaText = display.contentHeight/2
 
------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
 -- create my local varibles
-local myHexagon
-local heightOfHexagon = 200
-local baseOfHexagon = 350
-local areaOfHexagon
-local verticesHexagon = { -25,-25, -25,35, -15,25 }
+local myPentagon
+local pentX = display.contentWidth * 1/2
+local pentY = display.contentHeight * 1/2
+local pentVertices = { -50,50, 50,50, 100,-100, 50,-50, -50,-50, }
 
--- draw the Hexagon that is the width and the height
-myHexagon = display.newPolygon(200, 400, verticesHexagon)
--- anchor the parallelogram in the middle left corner of the screen
--- and set its (x,y) position
-myParallelogram.anchorX = 0 
-myParallelogram.anchorY = 0
-myParallelogram.x = 20 
-myParallelogram.y = 20
+
+-- draw the Pentagon that is the width and the height
+myPentagon = display.newPolygon( pentX, pentY, pentVertices)
+
+-- anchor the Pentagon in the middle left corner of the screen and set its (x,y) position
+myPentagon.x = 215
+myPentagon.y = 570
 
 -- set the width of the border 
-myHexagon.strokeWidth = 20
+myPentagon.strokeWidth = 5
 
--- set the color of the Hexagon
-myHexagon:setFillColor(128/255, 255/255, 0/255)
+-- set the color of the Pentagon
+myPentagon:setFillColor(255/255, 255/255, 0/255)
 
 -- set the color of the border 
-myHexagon:setStrokeColor(0/255, 0/255, 0/255)
-
--- calculate the area of the Hexagon
-areaOfHexagon = baseOfHexagon * heightOfHexagon
+myPentagon:setStrokeColor(255/255, 255/255, 255/255)
 
 -- write the name name of the shape on the screen .
-areaText = display.newText("Hexagon", 0, 0, Arial, textSize)
+areaText =  display.newText("Pentagon", 0, 0, Arial, textSize)
 
 -- set the color of the newText
-areaText:setTextColor(1/255 ,0/255 ,0/255) 
+areaText:setTextColor(255/255 ,255/255 ,0/255) 
 
 -- anchor the text and set its(x,y) position
-areaText.anchorX = 0
-areaText.anchorY = 0
-areaText.x = 80
-areaText.y = 200
+areaText.x = 512
+areaText.y = 600
 areaText = display.contentHeight/2
