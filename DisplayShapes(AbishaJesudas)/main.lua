@@ -80,7 +80,6 @@ areaText = display.contentHeight/2
 
 ----------------------------------------------------------------------------------------
 
---[
 -- create my local varibles
 local myParallelogram
 local paraX = display.contentWidth * 3/4
