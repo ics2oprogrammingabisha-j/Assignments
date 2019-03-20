@@ -76,7 +76,7 @@ local mango = display.newImageRect("Images/mango.png", 200, 200)
 mango.alpha = 1
 
 -- set the initial x and y position of mango
-mango.y = 512
+mango.y = 1
 mango.x = display.contentHeight/2
 
 -- Function: MoveMango
@@ -85,7 +85,7 @@ mango.x = display.contentHeight/2
 -- Description: This function adds the scrool speed to the x-value of the ship
 local function MoveMango(event)
 	-- add the scrool speed to the x-value of the ship
-	mango.x = mango.x + scrollspeed
+	mango.y = mango.y + scrollspeed
 	-- change the transparency of the ship every time it moves so that it fades out
 	mango.alpha = mango.alpha + 0.01
 	
@@ -96,3 +96,62 @@ Runtime:addEventListener("enterFrame", MoveMango)
 
 -------------------------------------------------------------------------------------------------------
 
+-- global variables
+scrollspeed = 3 
+
+-- charecter image width and height
+local pinapple = display.newImageRect("Images/pinapple.png", 200, 200)
+
+-- set the image to be transparent
+pinapple.alpha = 0
+
+-- set the initial x and y position of peach
+pinapple.x = 726
+pinapple.y = display.contentHeight/3
+
+-- Function: MovePinapple
+-- Input: this function accepts a nevent listener
+-- Output: none
+-- Description: This function adds the scrool speed to the x-value of the ship
+local function MovePinapple(event)
+	-- add the scrool speed to the x-value of the ship
+	pinapple.x = pinapple.x + scrollspeed
+	pinapple.y = pinapple.y + scrollspeed
+	-- change the transparency of the ship every time it moves so that it fades out
+	pinapple.alpha = pinapple.alpha + 0.01
+end
+
+-- MovePinapple will be called over and over again
+Runtime:addEventListener("enterFrame", MovePinapple)
+
+----------------------------------------------------------------------------------------------------------
+
+-- global variables
+scrollspeed = 3 
+  
+-- charecter image width and height
+local strawberries = display.newImageRect("Images/strawberries.png", 200, 200)
+
+-- set the image to be transparent
+strawberries.alpha = 0
+
+-- set the initial x and y position of strawberries
+strawberries.x = 1024
+strawberries.y = display.contentHeight/1.5 
+
+-- Function: MoveStrawberries
+-- Input: thsi function accepts a nevent listener
+-- Output: none
+-- Description: This function adds the scrool speed to the x-value of the ship
+local function MoveStrawberries(event)
+	-- add the scrool speed to the x-value of the ship
+	strawberries.width = strawberries.width - scrollspeed
+	strawberries.height = strawberries.height - scrollspeed
+	strawberries.x = strawberries.x - scrollspeed
+	strawberries.y = strawberries.y - scrollspeed
+	-- change the transparency of the ship every time it moves so that it fades out
+	strawberries.alpha = strawberries.alpha - 0.01
+end
+
+-- MoveStrawberries will be called over and over again
+Runtime:addEventListener("enterFrame", MoveStrawberries)
