@@ -7,7 +7,7 @@
 display.setStatusBar(display.HiddenStatusBar)
 
 -- global variables
-scrollspeed = 3 
+scrollspeed = 7
 
 -- backgroung image width and height
 local background = display.newImageRect("Images/fruit background.jpg", 2048, 1536)  
@@ -39,7 +39,7 @@ Runtime:addEventListener("enterFrame", MovePeach)
 ----------------------------------------------------------------------------------------------
 
 -- global variables
-scrollspeed = 4
+scrollspeed = 7
 
 -- charecter image width and height
 local kiwi = display.newImageRect("Images/kiwi.png", 200, 200)
@@ -136,7 +136,7 @@ local strawberries = display.newImageRect("Images/strawberries.png", 200, 200)
 strawberries.alpha = 0
 
 -- set the initial x and y position of strawberries
-strawberries.x = 1024
+strawberries.x = 500
 strawberries.y = display.contentHeight/1.5 
 
 -- Function: MoveStrawberries
@@ -150,7 +150,7 @@ local function MoveStrawberries(event)
 	strawberries.x = strawberries.x - scrollspeed
 	strawberries.y = strawberries.y - scrollspeed
 	-- change the transparency of the ship every time it moves so that it fades out
-	strawberries.alpha = strawberries.alpha - 0.01
+	strawberries.alpha = strawberries.alpha + 0.01
 end
 
 -- MoveStrawberries will be called over and over again
