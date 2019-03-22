@@ -97,7 +97,7 @@ Runtime:addEventListener("enterFrame", MoveMango)
 -------------------------------------------------------------------------------------------------------
 
 -- global variables
-scrollspeed = 3 
+scrollspeed = 2
 
 -- charecter image width and height
 local pinapple = display.newImageRect("Images/pinapple.png", 200, 200)
@@ -127,7 +127,7 @@ Runtime:addEventListener("enterFrame", MovePinapple)
 ----------------------------------------------------------------------------------------------------------
 
 -- global variables
-scrollspeed = 3 
+scrollspeed = 2 
   
 -- charecter image width and height
 local strawberries = display.newImageRect("Images/strawberries.png", 200, 200)
