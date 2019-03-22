@@ -1,4 +1,4 @@
- -- Title: AreaOfRectangleAndCircle
+-- Title: AreaOfRectangleAndCircle
 -- Name: Abisha Jesudas
 -- Course: ICS2O/3C
 -- This program i show you how to make adisplay shapes on an ipad 
@@ -10,6 +10,8 @@ local heigthOfTriangle
 local areaText
 local textSize = 50
 local verticesTriangle = { 0,-50, 50,50, -50,50 }
+
+--
 
 
 -- set the background colour of my screen.
@@ -48,21 +50,16 @@ areaText.y =display.contentHeight/2
 areaText:setTextColor(0, 0, 0)
 
 ----------------------------------------------------------------------------------------
-
+--[[
 -- create my local varibles
 local myParallelogram
-local heightOfParallelogram = 200
-local baseOfPrallelogram = 350
-local areaOfParallelogram
-local verticesaParallelogram = -25,-25, -25,35, -15,25	
+	
 
 
 -- draw the parallelogram that is the width and the height
-myParallelogram = display.newPolygon(300, 500, widthOfParallelogram, heightOfParallelogram)
 
 -- anchor the parallelogram in the middle left corner of the screen and set its (x,y) position
-myParallelogram.anchorX = 0 
-myParallelogram.anchorY = 0
+
 myParallelogram.x = 20 
 myParallelogram.y = 20
 
