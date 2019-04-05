@@ -1,0 +1,150 @@
+==============================
+Default recording device number: -1
+Default playback device number: 1
+==============================
+Device ID: 0
+Device name: Microsoft Sound Mapper - Output
+Host name: MME
+Recording channels: 0
+Playback channels: 2
+Low Recording Latency: 0.090000
+Low Playback Latency: 0.090000
+High Recording Latency: 0.180000
+High Playback Latency: 0.180000
+Supported Rates:
+    8000
+    9600
+    11025
+    12000
+    15000
+    16000
+    22050
+    24000
+    32000
+    44100
+    48000
+    88200
+    96000
+    176400
+    192000
+    352800
+    384000
+==============================
+Device ID: 1
+Device name: Speaker (Conexant HD Audio)
+Host name: MME
+Recording channels: 0
+Playback channels: 2
+Low Recording Latency: 0.090000
+Low Playback Latency: 0.090000
+High Recording Latency: 0.180000
+High Playback Latency: 0.180000
+Supported Rates:
+    8000
+    9600
+    11025
+    12000
+    15000
+    16000
+    22050
+    24000
+    32000
+    44100
+    48000
+    88200
+    96000
+    176400
+    192000
+    352800
+    384000
+==============================
+Device ID: 2
+Device name: Primary Sound Driver
+Host name: Windows DirectSound
+Recording channels: 0
+Playback channels: 2
+Low Recording Latency: 0.000000
+Low Playback Latency: 0.120000
+High Recording Latency: 0.000000
+High Playback Latency: 0.240000
+Supported Rates:
+    8000
+    9600
+    11025
+    12000
+    15000
+    16000
+    22050
+    24000
+    32000
+    44100
+    48000
+    88200
+    96000
+    176400
+    192000
+==============================
+Device ID: 3
+Device name: Speaker (Conexant HD Audio)
+Host name: Windows DirectSound
+Recording channels: 0
+Playback channels: 2
+Low Recording Latency: 0.000000
+Low Playback Latency: 0.120000
+High Recording Latency: 0.000000
+High Playback Latency: 0.240000
+Supported Rates:
+    8000
+    9600
+    11025
+    12000
+    15000
+    16000
+    22050
+    24000
+    32000
+    44100
+    48000
+    88200
+    96000
+    176400
+    192000
+==============================
+Device ID: 4
+Device name: Speaker (Conexant HD Audio)
+Host name: Windows WASAPI
+Recording channels: 0
+Playback channels: 2
+Low Recording Latency: 0.000000
+Low Playback Latency: 0.003000
+High Recording Latency: 0.000000
+High Playback Latency: 0.010000
+Supported Rates:
+    48000
+==============================
+Device ID: 5
+Device name: Speaker (Conexant HD Audio) (loopback)
+Host name: Windows WASAPI
+Recording channels: 2
+Playback channels: 0
+Low Recording Latency: 0.003000
+Low Playback Latency: 0.000000
+High Recording Latency: 0.010000
+High Playback Latency: 0.000000
+Supported Rates:
+==============================
+Selected recording device: 5 - Microsoft Sound Mapper - Output
+Selected playback device: 4 - Speaker (Conexant HD Audio)
+Supported Rates:
+    48000
+==============================
+Available mixers:
+==============================
+Available recording sources:
+0 - Master
+==============================
+Available playback volumes:
+0 - PCM
+==============================
+Recording volume is native
+Playback volume is native
