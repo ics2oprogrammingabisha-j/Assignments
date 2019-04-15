@@ -1,4 +1,4 @@
--- Title: MovingImages
+-- Title: CompanyAnimation
 -- Name: Abisha Jesudas
 -- Course: ICS2O/3C
 -- This program moves a beetleship across the screen and then makes it fade out.
@@ -19,34 +19,27 @@ local CompLogo = display.newImageRect("Images/CompanyLogoAbishaJ@2x.png", 600, 6
 CompLogo.x = 500
 CompLogo.y = display.contentHeight/2
 
+---------------------------------------------------------------------------------------------------
 
+-- global variables
+scrollSpeed = 5
 
---[[
+-- charector width and height
+local rocketship = display.newImageRect("Images/CompanyLogoAbishaJRocketshipandDog@2x.psd", 200, 200)
 
--- charecter image width and height 
-local beetleship = display.newImageRect("Images/beetleship.png", 200, 200)
+-- set the initial x and y position of the rocketship
+rocketship.x = 1024
+rocketship.y = display.contentHeight/2
 
--- set the image to be transparent
-beetleship.alpha = 1
-
--- set the initial x and y postion of beetleship
-beetleship.x = 700
-beetleship.y = display.contentHeight/1 
-
--- function: Moveship 
+-- function: Moveship
 -- Input: this function accepts an event listener
--- Output none 
--- Description : this funtion adds the srroll speed to the x-value of the ship 
+-- Output none
+-- description : this function adds the scroll speed to the x-value of the ship
 local function Moveship(event)
-	-- add the scroll speed to the x-value of the ship
-	beetleship.width = beetleship.width - scrollspeed 
-	beetleship.height = beetleship.height - scrollspeed
-	beetleship.x = beetleship.x - scrollSpeed
-	beetleship.y = beetleship.y - scrollSpeed
-	-- change the transparenvy of the ship every time it moves
-	beetleship.alpha = beetleship.alpha + 0.01
-
+	-- add the scrool speed to the x-value of the ship
+	rocketship.x = rocketship.x - scrollSpeed
+	-- change the transparency of the ship so that every time it moves it fades out.
+	rocketship.alpha = rocketship.alpha + 0.01
 end
--- Moveship will be called over and over again
+-- moveship will be called over and over again
 Runtime:addEventListener("enterFrame", Moveship)
---]]
