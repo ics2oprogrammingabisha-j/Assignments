@@ -45,7 +45,7 @@ Rocketship = display.newImageRect("Images/CompanyLogoAbishaJRocketship@2x.png", 
 -- set the image to be transparent
 Rocketship.alpha = 0
 
--- set the initial x and y position of the r\Rocketship
+-- set the initial x and y position of the Rocketship
 Rocketship.x = 1024
 Rocketship.y = 350
 
